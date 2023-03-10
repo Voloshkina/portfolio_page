@@ -1,0 +1,327 @@
+.header {
+  min-height: 100vh;
+  background-image: url(../img/Header-bgi.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .header-content {
+    height: 120px;
+    background-color: #fff;
+
+    @media (max-width: 1600px) {
+      height: 100px;
+    }
+    @media (max-width: 1280px) {
+      height: 80px;
+    }
+    @media (max-width: 480px) {
+      height: 60px;
+    }
+  }
+  &__content {
+    text-align: end;
+    position: absolute;
+    bottom: 10%;
+    right: 20px;
+    @media (max-width: 768px) {
+      bottom: 15%;
+    }
+  }
+  &__separator {
+    flex-grow: 1;
+  }
+}
+.container {
+  max-width: 1920px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  @media (max-width: 1280px) {
+    max-width: 100%;
+  }
+}
+.navbar {
+  display: flex;
+  height: 120px;
+  line-height: 120px;
+  vertical-align: middle;
+  @media (max-width: 1600px) {
+    height: 100px;
+    line-height: 100px;
+  }
+  @media (max-width: 1280px) {
+    height: 80px;
+    line-height: 80px;
+    justify-content: space-between;
+  }
+  @media (max-width: 480px) {
+    height: 60px;
+    line-height: 60px;
+    position: fixed;
+    background-color: #fff;
+    z-index: 50;
+    width: 100%;
+  }
+
+  &__burger {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $primary;
+    margin: auto 0;
+  }
+  &__logo {
+    background-image: url(../img/logo.png);
+  }
+  &__social {
+    margin-left: auto;
+    @media (max-width: 1280px) {
+      margin-left: 0;
+    }
+  }
+}
+.logo {
+  width: 120px;
+  height: 120px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  box-sizing: border-box;
+  margin-top: 10px;
+  @media (max-width: 1600px) {
+    height: 100px;
+    width: 100px;
+  }
+  @media (max-width: 1280px) {
+    height: 80px;
+    width: 80px;
+  }
+  @media (max-width: 480px) {
+    height: 50px;
+    width: 50px;
+  }
+}
+.menu {
+  display: flex;
+  margin-left: 50px;
+
+  &__item {
+    text-decoration: none;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    color: black;
+    padding: 0 25px;
+  }
+  &__item:hover {
+    content: "";
+    color: $primary;
+  }
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 10px auto;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &_brg {
+    background-image: url(../img/menu_burger_icon_176150.svg);
+  }
+  &_search {
+    background-image: url(../img/icons_search.svg);
+    width: 25px;
+    height: 25px;
+    margin: 7px auto;
+  }
+  &_vk {
+    background-image: url(../img/vkwhite.svg);
+  }
+  &_f {
+    background-image: url(../img/facebook-white.svg);
+  }
+  &_in {
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/instagram.svg);
+    margin: 0 auto;
+  }
+
+  &_size {
+    width: 50px;
+    height: 50px;
+  }
+}
+.navbar__burger:active .icon_brg {
+  background-image: url(../img/menu_burger_icon.svg);
+}
+.navbar__burger:active,
+.item-social_active:active {
+  background-color: #fff;
+  border: 2px solid $primary;
+  box-sizing: border-box;
+}
+
+.item-social {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: $primary;
+  display: inline-block;
+  margin: 40px 10px;
+  transition: 0.3s;
+  &_in {
+    border-radius: 0;
+    background-color: transparent;
+  }
+  @media (max-width: 1600px) {
+    margin: 30px 10px;
+  }
+  @media (max-width: 1280px) {
+    margin: 20px 0;
+  }
+  @media (max-width: 480px) {
+    margin: 10px 0;
+  }
+}
+.item-social_active:active .icon_search {
+  background-image: url(../img/icons_search-primary.svg);
+}
+
+.img {
+  width: 100%;
+}
+.title {
+  height: 60px;
+  line-height: 60px;
+  font-size: 6rem;
+  letter-spacing: 0.5rem;
+  color: #fff;
+  @media (max-width: 1280px) {
+    height: 50px;
+    line-height: 50px;
+  }
+  @media (max-width: 480px) {
+    height: 20px;
+    line-height: 20px;
+    font-size: 5rem;
+  }
+  &_color {
+    color: black;
+  }
+  &_primary {
+    color: $primary;
+    height: 80px;
+    line-height: 80px;
+    @media (max-width: 1600px) {
+      height: 60px;
+      line-height: 60px;
+    }
+    @media (max-width: 960px) {
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  @media (max-width: 960px) {
+    line-height: 40px;
+    height: 40px;
+  }
+}
+.btn {
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  border: 3px solid #fff;
+  box-sizing: border-box;
+  border-radius: 7px;
+  background-color: #fff;
+  color: $primary;
+  font-size: 4rem;
+  letter-spacing: 0.2rem;
+  padding: 0 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &_border {
+    border: 3px solid $primary;
+    @media (max-width: 960px) {
+      border: 2px solid $primary;
+    }
+  }
+  @media (max-width: 1600px) {
+    height: 60px;
+    line-height: 60px;
+  }
+
+  @media (max-width: 1280px) {
+    padding: 0 10px;
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+  }
+  @media (max-width: 480px) {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+.btn:hover {
+  border: 2px solid $primary;
+  background-color: $primary;
+  color: #fff;
+}
+.slider {
+  display: flex;
+  position: absolute;
+  margin-left: auto;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, 50%);
+  bottom: 100px;
+  @media (max-width: 1400px) {
+    bottom: 80px;
+  }
+  @media (max-width: 960px) {
+    bottom: 50px;
+  }
+
+  &__box {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    vertical-align: middle;
+    margin: 30px;
+    fill: $primary;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    @media (max-width: 1600px) {
+      width: 60px;
+      height: 60px;
+      margin: 15px;
+    }
+    @media (max-width: 1280px) {
+      height: 40px;
+      width: 40px;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      margin: 15px auto;
+      @media (max-width: 1600px) {
+        margin: 10px auto;
+      }
+      @media (max-width: 1280px) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  &__box:hover {
+    background-color: $primary;
+    fill: #fff;
+  }
+}

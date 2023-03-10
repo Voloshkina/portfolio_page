@@ -1,0 +1,191 @@
+.sect-contacts {
+  .section {
+    text-align: start;
+    display: flex;
+    @media (max-width: 960px) {
+      flex-direction: column;
+      text-align: center;
+      padding-top: 0;
+    }
+  }
+  .row {
+    width: 100%;
+    position: relative;
+
+    &_size {
+      flex-direction: column;
+      width: 200px;
+      margin-right: 30px;
+      box-sizing: border-box;
+      @media (max-width: 960px) {
+        width: 100%;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-around;
+        margin: 0 auto;
+        @media (max-width: 480px) {
+          justify-content: space-between;
+        }
+      }
+    }
+    .dir {
+      width: 100%;
+      display: flex;
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+      &_name {
+        width: 35%;
+        padding-right: 30px;
+        @media (max-width: 480px) {
+          padding-right: 0;
+          width: 60%;
+        }
+      }
+      &_email {
+        width: 65%;
+        @media (max-width: 480px) {
+          padding-right: 0;
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  .input-t {
+    width: 100%;
+  }
+  .btn-push {
+    max-width: 200px;
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+    @media (max-width: 960px) {
+      position: relative;
+      margin-top: 50px;
+    }
+  }
+
+  .btn__social {
+    margin: 0;
+    margin-bottom: 30px;
+    @media (max-width: 520px) {
+      margin: 0 5px 20px;
+    }
+    @media (max-width: 480px) {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+  .btn__social:hover .icon_vk {
+    background-image: url(../img/vkwhite.svg);
+  }
+  .btn__social:hover .icon_face {
+    background-image: url(../img/facebook-white.svg);
+  }
+  .btn__social:hover .icon_insta {
+    background-image: url(../img/instagram-white.svg);
+  }
+  .icon {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0 40px;
+
+    @media (max-width: 1600px) {
+      width: 30px;
+      height: 30px;
+    }
+    @media (max-width: 1280px) {
+      width: 25px;
+      height: 25px;
+    }
+    @media (max-width: 480px) {
+      width: 20px;
+      height: 20px;
+      padding: 0 20px;
+      margin: 5px 0;
+    }
+    @media (max-width: 360px) {
+      padding: 0 15px;
+    }
+
+    &_vk {
+      background-image: url(../img/vk.svg);
+    }
+
+    &_face {
+      background-image: url(../img/facebook-letter-logo.svg);
+    }
+
+    &_insta {
+      background-image: url(../img/instagram.svg);
+    }
+  }
+}
+.input {
+  height: 80px;
+  line-height: 80px;
+  font-size: 3.5rem;
+  letter-spacing: 0.3rem;
+  box-sizing: border-box;
+  border: transparent;
+  border-bottom: 3px solid $primary;
+  color: $primary;
+  margin-top: 30px;
+  @media (max-width: 1600px) {
+    height: 60px;
+    line-height: 60px;
+  }
+  @media (max-width: 1280px) {
+    height: 40px;
+    line-height: 40px;
+  }
+  @media (max-width: 960px) {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 2px solid $primary;
+  }
+  @media (max-width: 480px) {
+    height: 40px;
+    line-height: 40px;
+    margin-top: 15px;
+  }
+  &_name {
+    width: 100%;
+  }
+  &_email {
+    width: 100%;
+  }
+}
+.input::placeholder {
+  color: transparent;
+}
+.input:focus {
+  outline: 0;
+}
+
+.form {
+  &_floating {
+    position: relative;
+  }
+  &__label {
+    top: 50%;
+    display: flex;
+    transform: translateY(-50%);
+    margin-top: 20px;
+    font-size: 3.2rem;
+    color: $primary;
+    letter-spacing: 0.3rem;
+    position: absolute;
+    @media (max-width: 480px) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.form_floating .form__input:focus ~ .form__label,
+.form_floating .form__input:not(:placeholder-shown) ~ .form__label {
+  top: 0;
+  transform: translateY(-50%) scale(0.8);
+}

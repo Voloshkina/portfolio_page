@@ -42,6 +42,7 @@
   fill: transparent;
   margin: 0 auto 20px;
   cursor: pointer;
+
   @media (max-width: 1280px) {
     width: 80px;
     height: 80px;
@@ -54,6 +55,48 @@
     width: 60px;
     height: 60px;
     margin: 20px 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &_reportage {
+      background-image: url(../img/photo-camera.svg);
+    }
+    &_portrait {
+      background-image: url(../img/camera-portrait-mode-3.svg);
+    }
+    &_solo {
+      background-image: url(../img/one-man-walking.svg);
+    }
+    &_advertising {
+      background-image: url(../img/fashion.svg);
+    }
+    &_lovestory {
+      background-image: url(../img/like.svg);
+    }
+    &_nude {
+      background-image: url(../img/shapes.svg);
+    }
+    &_nude {
+      background-image: url(../img/shapes.svg);
+    }
+    &_studio {
+      background-image: url(../img/buildings.svg);
+    }
+    &_baby {
+      background-image: url(../img/kids-couple.svg);
+    }
+    &_character {
+      background-image: url(../img/the-joker.svg);
+    }
+    &_newborn {
+      background-image: url(../img/newborn.svg);
+    }
+    &_model {
+      background-image: url(../img/newlyweds_1.svg);
+    }
+    &_wedding {
+      background-image: url(../img/newlyweds_1.svg);
+    }
 
     @media (max-width: 1280px) {
       width: 50px;

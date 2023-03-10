@@ -79,6 +79,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
+  padding-bottom: 100%;
 
   img {
     opacity: 0;
@@ -87,8 +88,41 @@
     left: 0;
     bottom: 0;
   }
-  &_rect {
-    padding-bottom: 100%;
+  &_photo1 {
+    background-image: url(../img/photo1.png);
+  }
+  &_photo2 {
+    background-image: url(../img/photo2.png);
+  }
+  &_photo3 {
+    background-image: url(../img/photo3.png);
+  }
+  &_photo4 {
+    background-image: url(../img/photo4.png);
+  }
+  &_photo5 {
+    background-image: url(../img/photo5.png);
+  }
+  &_photo6 {
+    background-image: url(../img/photo6.png);
+  }
+  &_photo7 {
+    background-image: url(../img/photo7.png);
+  }
+  &_photo8 {
+    background-image: url(../img/photo8.png);
+  }
+  &_photo9 {
+    background-image: url(../img/photo9.png);
+  }
+  &_photo10 {
+    background-image: url(../img/photo10.png);
+  }
+  &_photo11 {
+    background-image: url(../img/photo11.png);
+  }
+  &_photo12 {
+    background-image: url(../img/photo12.png);
   }
 }
 .img:hover .wrapper-serv {
